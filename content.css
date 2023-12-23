@@ -1,0 +1,127 @@
+.main{
+    background-color: rgb(251, 251, 87);
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center; 
+    width: 80%;
+    margin: 0 auto;
+    height: 90vh;
+}
+
+.main-content {
+    justify-self: start;
+    margin-left: 20px;
+    color: var(--darkgray);
+    width: 80%;
+}
+
+.main-content h1{
+    font-size: 1.5rem;
+}
+
+.main-content p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.main-button{
+    font-size:1rem;
+    margin-top: 2rem; 
+    background-color: var(--brightred);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 7px; 
+    color: var(--white); 
+    position: relative; 
+    transition: all .35s;
+    outline: none;
+}
+
+.main-button a {
+    position: relative;
+    z-index: 2;  /*to prevent texted being covered when doing the transition color when hovering*/
+    color: var(--white); /*get started*/
+    text-decoration: none;
+}
+
+.main-button:after{
+    position: absolute;
+    content:""; /*makes empty so that when hovering will just transition color*/
+    top:0; /*stay within the Get Started box*/
+    left:0; /*stay within the Get Started box*/
+    width: 0; /*set the trans start at 0*/
+    height: 100%;
+    transition: all .35s;
+    border-radius: 7px;
+    background-color: rgb(123, 217, 249);
+}
+
+.main-button:hover {
+    color: var(--white);
+}
+
+.main-button:hover:after {
+    width: 100%; /*how far the transition will go */ 
+}
+
+#main-img {
+    height: 85%;
+    width: 85%;
+}
+
+.main-img-container {
+    text-align: center;
+
+}
+
+/*Mobile responsive*/ 
+@media screen and (max-width: 768px){
+    .main-container{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+    .main-content {
+        justify-self: center;
+        color: var(--darkgray);
+        width: 80%;
+        margin: 0 auto; 
+    }
+    .main-content h1{
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+    #main-img {
+        display: none; /*not show img when screen too small*/ 
+
+    }
+}
+
+/* @media screen and (max-width: 480px){
+    .main-content {
+        text-align: center;
+    }
+    .main-content h1{
+        font-size: 2.8rem;
+    }
+    .main-content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    .main-button {
+        padding: 12px 36px;
+        margin-top: 2.5rem;
+    }
+} */
