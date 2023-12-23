@@ -1,2 +1,4 @@
 # Fencing-club-web
-This is ver1 of this website using HTML, CSS and simple JS 
+This is version1 of this website using HTML, CSS and simple JS. This website contains simple features such as navigation bar that has 5 categories, when hover over will change the color of texts. When the screen size is small, the texts will adjust and it will appears a 3-bar button drop-down option on the top right. When the 3-bar button is clicked, it will turn into symbol X. When clicking the symbol X again, it will close the drop-down option. The drop-down options provide the 5 categories again vertically, and each text will be highlighted when it is hovered on. The color transition effect is added to two buttons. One button will transform to transparent, and the other button will change color when hover on them.  
+
+To try the final work, please visit: https://vanessah-26.github.io/Fencing-club-web/
